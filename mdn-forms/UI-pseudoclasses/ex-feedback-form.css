@@ -1,0 +1,22 @@
+body {
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+form label {
+  display: inline-block;
+  width: 400px;
+  margin: 0.5rem;
+}
+
+button {
+  margin: 2em;
+  align-self: center;
+}
