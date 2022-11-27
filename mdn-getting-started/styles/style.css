@@ -1,0 +1,45 @@
+html {
+    font-family: "Open Sans", sans-serif;
+    background: grey;
+}
+
+body {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    border: 5px solid skyblue;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 3px 3px 1px teal;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+a {
+    color: darkred;
+}
+
+li {
+    color: teal;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: black;
+        color: white;
+    }
+}

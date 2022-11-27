@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Flex alignment of control and label */
+li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    position: relative;
+}
+
+/* Label sizing & positioning */
+label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+
+label span {
+    position: absolute;
+}
+
+/* 
+Reset checkbox UA styling
+and reate outer toggle area 
+*/
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    /* define switch oval (aka outer toggle) */
+    border: 2px solid black;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: #eee;
+    transition: all 0.4s;
+}
+
+/* 
+Append a before pseudo-element to
+style as the inner toggle switch. 
+*/
+input[type="checkbox"]::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    background-color: black;
+    content: ''; /* mandatory to render */
+    top: 7px;
+    left: 16%;
+    position: absolute; /* doesn't appear til pos'd? */
+    transition: all 0.4s;
+}
+
+/* 
+Animate, color and transition inner switch when checked.
+*/
+input[type="checkbox"]:checked {
+    background-color: #ffaa00;
+    transition: all 0.4s;
+}
+
+input[type="checkbox"]:checked::before {
+    left: 35%;
+    transition: all 0.4s;
+}
+
+/*
+Toggle on/off labels per checked state.
+*/
+input[type="checkbox"] ~ label .on,
+input[type="checkbox"]:checked ~ label .off {
+    opacity: 0;
+}
+
+/* ? */
+input[type="checkbox"] ~ label .off,
+input[type="checkbox"]:checked ~ label .on {
+    opacity: 1;
+}
+
+/* De-emphasize Chrome's UA focus outline */
+input:focus {
+    outline: 1px dotted black;
+}

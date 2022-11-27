@@ -1,0 +1,54 @@
+h1 {
+    color: aqua;
+}
+
+p {
+    color: teal;
+}
+
+li {
+    color: cadetblue;
+    list-style-type: armenian;
+}
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: green;
+}
+
+p span {
+    color: red;
+}
+
+li em {
+    color: rebeccapurple;
+}
+
+h1+p {
+    font-size: 1.25rem;
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+body h1+p .special {
+    color: yellow;
+    background-color: bisque;
+    padding: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: grey;
+    }
+
+    a:active {
+        color: white;
+    }
+}

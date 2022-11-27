@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form (MDN Structure a Form Project)</title>
+    <link rel="stylesheet" href="payment-form.css">
+</head>
+
+<body>
+    <form action="">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong></strong><span aria-label="Required">*</span></p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li><label for="title_1"><input type="radio" id="title_1" name="title" value="K">King</label></li>
+                    <li><label for="title_2"><input type="radio" id="title_2" name="title" value="Q">Queen</label></li>
+                    <li><label for="title_3"><input type="radio" id="title_3" name="title" value="J">Joker</label></li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>Name: </span><strong><span aria-label="Required">*</span></strong>
+                </label>
+                <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="email">
+                    <span>Email: </span><strong><span aria-label="Required">*</span></strong>
+                </label>
+                <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="password">
+                    <span>Password: </span><strong><span aria-label="Required">*</span></strong>
+                </label>
+                <input type="password" id="password" name="password">
+            </p>
+        </section>
+    </form>
+</body>
+
+</html>

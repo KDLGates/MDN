@@ -1,0 +1,12 @@
+* > form {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 80%;
+}
+
+li {
+    list-style-type: none;
+}

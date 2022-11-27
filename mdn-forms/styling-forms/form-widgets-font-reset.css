@@ -1,0 +1,8 @@
+/* Font reset for inconsistent browser font inheritance in form widgets. */
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: 100%;
+}

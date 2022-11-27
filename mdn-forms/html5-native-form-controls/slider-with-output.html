@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider With Output Example</title>
+</head>
+<body>
+    <label for="price">"Choose a maximum house price: "</label>
+    <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000" />
+    <output class="price-output" for="price"></output>
+    <script>
+        const price = document.querySelector("#price");
+        const output = document.querySelector(".price-output");
+
+        output.textContent = price.value;
+
+        // "input": event type, ref MDN https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+        price.addEventListener("input", () => {
+            output.textContent = price.value;
+        });
+    </script>
+</body>
+</html>
