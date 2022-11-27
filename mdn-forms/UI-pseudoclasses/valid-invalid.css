@@ -18,3 +18,89 @@ input:invalid + span::before
 input:valid + span::before
 button
 */
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eee;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "❌";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✅";
+  color: green;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
