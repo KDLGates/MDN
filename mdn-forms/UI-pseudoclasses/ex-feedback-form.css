@@ -2,8 +2,18 @@ body {
   position: relative;
 }
 
-form {
+.flex-container {
   display: flex;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+form * {
+  appearance: none;
   flex-direction: column;
   justify-content: space-around;
   width: 80%;
@@ -16,7 +26,36 @@ form label {
   margin: 0.5rem;
 }
 
+legend {
+  color: white;
+  background: black;
+  font-weight: bold;
+  text-align: center;
+}
+
 button {
   margin: 2em;
   align-self: center;
+}
+
+input:required {
+  border: 1px solid black;
+}
+
+input:optional {
+  border: 1px solid grey;
+}
+
+input+span {
+  position: relative;
+}
+
+input:required + span::after {
+  content: "required";
+  position: absolute;
+  color: white;
+  background: black;
+  padding: 5px 10px;
+  bottom: -7px;
+  left: 5px;
 }

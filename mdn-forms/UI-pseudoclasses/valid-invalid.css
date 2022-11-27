@@ -1,0 +1,20 @@
+/* 
+TODO: Work through 
+https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html 
+*/
+/*
+body
+fieldset
+legend
+fieldset > div
+button, label, input
+input
+input:hover, input:focus
+input + span
+input:required + span::after
+input + span::before
+input:invalid
+input:invalid + span::before
+input:valid + span::before
+button
+*/
